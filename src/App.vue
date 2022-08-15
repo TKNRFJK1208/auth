@@ -21,6 +21,13 @@ export default {
     isAuthenticated() {
       return this.$store.getters.idToken !== null;
     }
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+      this.email = '';
+      this.password = '';
+    }
   }
 }
 </script>
